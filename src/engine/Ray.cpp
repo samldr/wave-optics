@@ -1,14 +1,9 @@
-#include "RaySegment.c"
+#include <iostream>
+#include <vector>
 
-class Ray {
-    public:
-        RaySegment * segments;
-        int wavelength;
-        Ray(int wavelength, int * pos, int * dir, int * polarization, int intensity, int refractiveIndex);    
-};
+#include "Ray.h"
 
-Ray::Ray(int wavelength, int * pos, int * dir, int * polarization, int intensity, int refractiveIndex){
-    wavelength = wavelength;
-    segments += new RaySegment(pos, dir, polarization, intensity, refractiveIndex);
+Ray::Ray(double wavelength, vector<double> pos, vector<double> dir, vector<double> polarization, double intensity, double refractiveIndex){
+    wavelength_ = wavelength;
+    segments_.push_back(RaySegment(pos, dir, polarization, intensity, refractiveIndex));
 }
-

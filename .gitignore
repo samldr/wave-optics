@@ -1,6 +1,7 @@
 # Build
 /build
 
+
 # Prerequisites
 *.d
 
@@ -34,5 +35,6 @@
 *.out
 *.app
 
-# OS
+# Other
 .DS_Store
+./vscode

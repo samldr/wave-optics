@@ -1,18 +1,13 @@
-class RaySegment {
-        public:
-            int * pos;
-            int * dir;
-            int * polarization;
-            int intensity;
-            int refractiveIndex;
+#include <iostream>
+#include <vector>
+#include "RaySegment.h"
 
-            RaySegment(int * pos, int * dir, int * polarization, int intensity, int refractiveIndex) {
-                pos = pos;
-                dir = dir;
-                polarization = polarization;
-                intensity = intensity;
-                refractiveIndex = refractiveIndex;
-            }
+using namespace std;
 
-};
-
+RaySegment::RaySegment(vector<double> pos, vector<double> dir, vector<double> polarization, double intensity, double refractiveIndex) {
+    pos_ = pos;
+    dir_ = dir;
+    polarization_ = polarization;
+    intensity_ = intensity;
+    refractiveIndex_ = refractiveIndex;
+}
