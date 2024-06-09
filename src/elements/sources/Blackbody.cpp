@@ -27,4 +27,6 @@ void Blackbody::spawnRays(vector<Ray> rays){
     
         rays.push_back(Ray(wavelength, pos_, dir, polarization, 1, refractiveIndex));
     };
+
 }
+

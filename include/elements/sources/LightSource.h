@@ -17,6 +17,7 @@ class LightSource {
         int rayNumber_; // the number of rays spawned by the light source
 
         LightSource(vector<double>, double, double, int);
+        virtual void spawnRays();
 };
 
 #endif
