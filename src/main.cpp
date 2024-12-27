@@ -2,9 +2,6 @@
 #include <iostream>
 #include <string>
 
-// eigen
-#include <Eigen/Dense>
-
 using namespace std;
 
 int main(int argc, char **argv) {
