@@ -22,3 +22,10 @@ $(BUILD_DIR):
 # make clean
 clean:
 	rm -rf $(BUILD_DIR)
+
+# build parser
+# build frontend
+# build renderer
+# build simulator
+# build graphics
+# build all
