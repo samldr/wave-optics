@@ -8,9 +8,8 @@
 using namespace std;
 
 class Physics {
-
-    virtual vector<RaySegment> newSegment(Ray);
-
+    public:
+        virtual vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);  
 };
 
 #endif

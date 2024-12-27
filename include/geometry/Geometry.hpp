@@ -8,9 +8,9 @@
 using namespace std;
 
 class Geometry {
-
-    virtual vector<double> getNormal(void);
-    virtual vector<double> getIntersection(Ray);
+    public:
+        virtual vector<double> getNormal(void);
+        virtual vector<double> getIntersection(Ray);
 
 };
 

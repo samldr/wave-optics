@@ -13,9 +13,8 @@ class Refractive : public Physics {
     public:
         double refractive_index_;
     
-    Refractive(double);
-    vector<RaySegment> newSegment(Ray);
-
+        Refractive(double);
+        vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);
 };
 
 #endif

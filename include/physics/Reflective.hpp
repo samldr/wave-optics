@@ -2,6 +2,8 @@
 #define REFLECTIVE_HPP
 
 #include <vector>
+#include <cmath>
+#include <Eigen/Dense>
 
 #include "Physics.hpp"
 #include "Ray.hpp"
@@ -10,9 +12,8 @@
 using namespace std;
 
 class Reflective : public Physics {
-    
-    vector<RaySegment> newSegment(Ray);
-
+    public:
+        vector<RaySegment> newSegment(Ray, vector<double>, vector<double>); // need to figure out what this does to polarization
 };
 
 #endif
