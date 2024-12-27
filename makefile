@@ -11,21 +11,21 @@ SRC_DIR := $(PRJ_DIR)/src
 BUILD_DIR := $(PRJ_DIR)/build
 INCLUDE_DIR := $(PRJ_DIR)/include
 
-# make
-# make clean
-# make all
+# library paths
+LIB_EIGEN_PATH := /usr/local/lib/eigen
 
-# create target for making the build folder
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+# build the main file that uses eigen
+main: $(BUILD_DIR)/main.o
+	g++ $(CPP_FLAGS_BUILD) -I$(INCLUDE_DIR) -I$(LIB_EIGEN_PATH) -o $(BUILD_DIR)/main $(BUILD_DIR)/main.o
 
-# make clean
+$(BUILD_DIR)/main.o: $(SRC_DIR)/main.cpp
+	g++ $(CPP_FLAGS_DEV) -I$(INCLUDE_DIR) -I$(LIB_EIGEN_PATH) -c $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/main.o
+
+# clean
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -f $(BUILD_DIR)/*.o
+	rm -f $(BUILD_DIR)/main
 
-# build parser
-# build frontend
-# build renderer
-# build simulator
-# build graphics
-# build all
+# run
+run: main
+	$(BUILD_DIR)/main
