@@ -4,13 +4,14 @@
 #include <vector>
 #include "Ray.hpp"
 #include "RaySegment.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
 class Geometry {
     public:
-        virtual vector<double> getNormal(void);
-        virtual vector<double> getIntersection(Ray);
+        virtual Point getNormal(void);
+        virtual Point getIntersection(Ray);
 
 };
 

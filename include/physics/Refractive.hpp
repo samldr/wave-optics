@@ -2,19 +2,27 @@
 #define REFRACTIVE_HPP
 
 #include <vector>
+#include <cmath>
+#include <Eigen/Dense>
 
 #include "Physics.hpp"
 #include "Ray.hpp"
 #include "RaySegment.hpp"
+#include "Mat.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
+
 class Refractive : public Physics {
     public:
-        double refractive_index_;
+       
+        enum Mat material_;
     
-        Refractive(double);
-        vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);
+        Refractive(Mat);
+        double sellmeier(Ray);
+        vector<RaySegment> newSegment(Ray, Point, Point);
+
 };
 
 #endif

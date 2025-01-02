@@ -5,12 +5,13 @@
 #include "Physics.hpp"
 #include "Ray.hpp"
 #include "RaySegment.hpp"
+#include "point.hpp"
 
 using namespace std;
 
 class Diffuse : public Physics {
     public:
-        vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);
+        vector<RaySegment> newSegment(Ray, point, point);
 };
 
 #endif

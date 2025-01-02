@@ -4,6 +4,7 @@
 #include <vector>
 #include "Geometry.hpp"
 #include "Physics.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
@@ -13,9 +14,9 @@ class BackendItem {
         Physics physics_;
     
         BackendItem(Geometry, Physics);
-        vector<double> getNormal(void);
-        vector<double> getIntersection(Ray);
-        vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);
+        Point getNormal(void);
+        Point getIntersection(Ray);
+        vector<RaySegment> newSegment(Ray, Point, Point);
 
 };
 

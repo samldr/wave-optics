@@ -4,12 +4,13 @@
 #include <vector>
 #include "Ray.hpp"
 #include "RaySegment.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
 class Physics {
     public:
-        virtual vector<RaySegment> newSegment(Ray, vector<double>, vector<double>);  
+        virtual vector<RaySegment> newSegment(Ray, Point, Point);  
 };
 
 #endif

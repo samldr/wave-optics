@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "RaySegment.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ class Ray {
         vector<RaySegment> segments_;
         double wavelength_;
         
-        Ray(double wavelength, vector<double> pos, vector<double> dir, vector<double> polarization, double intensity, double refractiveIndex);    
+        Ray(double wavelength, Point pos, Point dir, vector<double> polarization, double intensity, double refractiveIndex);    
 };
 
 #endif

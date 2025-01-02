@@ -5,12 +5,13 @@
 #include "Physics.hpp"
 #include "Ray.hpp"
 #include "RaySegment.hpp"
+#include "Point.hpp"
 
 using namespace std;
 
 class Absorbing : public Physics {
     public:
-        vector<RaySegment> newSegment(Ray, vector<double>);
+        vector<RaySegment> newSegment(Ray, Point, Point);
 };
 
 #endif
